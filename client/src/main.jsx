@@ -4,7 +4,11 @@ import './index.css'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <provider store={store}>
+    <BrouserRouter>
+    <MainContextProvider>
     <App />
-  </StrictMode>,
+    </MainContextProvider>
+    </BrouserRouter>
+  </provider>,
 )
